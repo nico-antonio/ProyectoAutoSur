@@ -1,0 +1,14 @@
+<p>Estamos buscando algún Renault {{ version }}</p>
+
+{% if renaults %}
+
+<ul>
+    {% for Renault in renaults %}
+    <li>{{Renault.version}}</li>
+    <li>{{Renault.año}}</li>
+    {% endfor %}
+
+ </ul> 
+ 
+ {% endif %}
+ 
