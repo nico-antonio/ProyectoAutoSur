@@ -13,7 +13,7 @@ class Fiat(models.Model):
     año=models.IntegerField()
 
     def __str__(self):
-        return "Fiat"(self.version)+" "+(self.año)
+        return "Fiat " + self.version + " " + str(self.año)
         
 
 class Renault(models.Model):
@@ -21,11 +21,11 @@ class Renault(models.Model):
     año=models.IntegerField()
     
     def __str__(self):
-        return "Renault"(self.version)+" "+(self.año)
+        return "Renault "+(self.version)+" "+str(self.año)
 
 class Citroen(models.Model):
     version= models.CharField(max_length=50)
     año=models.IntegerField()
 
     def __str__(self):
-        return "Citroen"(self.version)+" "+(self.año)
+        return "Citroen "+(self.version)+" "+str(self.año)
