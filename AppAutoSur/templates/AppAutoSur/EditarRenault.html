@@ -1,0 +1,31 @@
+{% extends 'AppAutosur/padre.html' %}
+{% load static %}
+
+{% block ContenidoQueCambia %}
+<h3>Editando un Renault</h3>
+
+{% if form.errors %}
+<p style= "color: red"> Están mal los datos, revisar </p>
+{% endif %}
+
+<form action="{% url 'EditarRenault' renault.id %}" method="POST"> {% csrf_token %}
+
+<table>
+
+{{ form.as_table }}
+
+</table>
+
+<input type="submit" value="Guardar">
+
+</form>
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -2,5 +2,9 @@
 {% load static %}
 
 {% block ContenidoQueCambia %}
-<H2>"ESTE ES EL CONTENIDO DE RENAULT"</H2>
+<h1 class="mb-5">Este es el contenido de Renault</h1>
+{% endblock %}
+
+{% block ContenidoQueCambia2 %}
+<a class="btn btn-agregar" href={% url "RenaultFormulario" %}>Agregar un Renault</a>
 {% endblock %}

@@ -3040,6 +3040,12 @@ textarea.form-control-lg {
   border-color: #fd0d0d;
 }
 
+.btn-agregar {
+  color: #fff;
+  background-color: #100f0f;
+  border-color: #100f0f;
+}
+
 .btn-fiat {
   color: #fff;
   background-color: #0dfd1d;

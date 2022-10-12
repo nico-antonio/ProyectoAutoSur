@@ -1,0 +1,18 @@
+{% extends 'AppAutosur/padre.html' %}
+{% load static %}
+
+{% block ContenidoQueCambia %}
+
+<H2>"Registro"</H2>
+<form action="" method="POST">
+    
+    {% csrf_token %}
+
+    {{ mensaje }}    
+    {{ form.as_p }}
+    <button type="submit"> Registrate!</a>
+    </button>    
+
+</form>
+
+{% endblock %}
