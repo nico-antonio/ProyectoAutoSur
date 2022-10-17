@@ -1,0 +1,25 @@
+{% extends 'AppAutosur/padre.html' %}
+{% load static %}
+
+{% block ContenidoQueCambia %}
+<H2>"Muestra de todos los Citroen publicados"</H2>
+
+{% for c in citroens %}
+
+<li> {{ c }}</li>
+
+<button>
+    <a href= "{% url 'EliminarCitroen' c.id %}"> Eliminar</a>
+</button>
+
+<button>
+    <a href= "{% url 'EditarCitroen' c.id %}"> Editar</a>
+</button>
+
+{% endfor %}
+
+{% endblock %}
+
+{% block ContenidoQueCambia2 %}
+<a class="btn btn-agregar" href={% url "CitroenFormulario" %}>Agregar un Citroen</a>
+{% endblock %}

@@ -20,18 +20,21 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="#!"><h1>Auto Sur</h1></a>
-                <a class="btn btn-citroen" href={% url "citroen" %}>Citroen</a>
-                <a class="btn btn-citroen" href={% url "renault" %}>Renault</a>
-                <a class="btn btn-citroen" href={% url "fiat" %}>Fiat</a>
-                <a class="btn btn-citroen" href={% url "peugeot" %}>Peugeot</a>
+                <a class="navbar-brand" href={% url "inicio" %}><h1>Auto Sur</h1></a>
+                <a class="btn btn-citroen" href={% url "LeerCitroen" %}>Citroen</a>
+                <a class="btn btn-citroen" href={% url "LeerRenault" %}>Renault</a>
+                <a class="btn btn-citroen" href={% url "LeerFiat" %}>Fiat</a>
+                <a class="btn btn-citroen" href={% url "LeerPeugeot" %}>Peugeot</a>
+                <h5> {{ user.username }}</h5>
                 {% if user.is_authenticated %}
+                <img height="50px" src="{{ avatar }}" alt="">
+                <a class="btn btn-primary" href={% url "editarPerfil" %}>Editar Perfil</a>
                 <a class="btn btn-primary" href={% url "logout" %}>Cerrar cesión</a>
                 {% else %}
                 <a class="btn btn-primary" href={% url "register" %}>Registrarse</a>
                 <a class="btn btn-primary" href={% url "login" %}>Iniciar sesión</a>
                 {% endif %}
-            </div>
+                            </div>
         </nav>
         <!-- Masthead-->
 
@@ -60,26 +63,18 @@
                 <div class="row">
                     <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
                         <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><a href="#!">About</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Contact</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Terms of Use</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
-                        </ul>
-                        <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2022. All Rights Reserved.</p>
-                    </div>
+                            <li class="list-inline-item"><a href={% url "AcercaDeNosotros" %}>Acerca de nosotros</a></li>
+                                                </div>
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
                         <ul class="list-inline mb-0">
                             <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-facebook fs-3"></i></a>
+                                <a href={% url "SinContenido" %}><i class="bi-facebook fs-3"></i></a>
                             </li>
                             <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-twitter fs-3"></i></a>
+                                <a href={% url "SinContenido" %}><i class="bi-twitter fs-3"></i></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#!"><i class="bi-instagram fs-3"></i></a>
+                                <a href={% url "SinContenido" %}><i class="bi-instagram fs-3"></i></a>
                             </li>
                         </ul>
                     </div>
