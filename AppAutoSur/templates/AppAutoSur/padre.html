@@ -29,6 +29,7 @@
                 {% if user.is_authenticated %}
                 <img height="50px" src="{{ avatar }}" alt="">
                 <a class="btn btn-primary" href={% url "editarPerfil" %}>Editar Perfil</a>
+                <a class="btn btn-primary" href={% url "Chat" %}>Chat</a>
                 <a class="btn btn-primary" href={% url "logout" %}>Cerrar cesión</a>
                 {% else %}
                 <a class="btn btn-primary" href={% url "register" %}>Registrarse</a>

@@ -1,0 +1,17 @@
+{% extends 'AppAutosur/padre.html' %}
+{% load static %}
+
+{% block ContenidoQueCambia %}
+<H2>"Mensajes"</H2>
+
+{% for m in mensajes %}
+
+<li> {{ m }}</li>
+
+{% endfor %}
+
+{% endblock %}
+
+{% block ContenidoQueCambia2 %}
+
+{% endblock %}

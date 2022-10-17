@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from AppAutoSur.views import *
 from django.contrib.auth.views import LogoutView
 
@@ -36,5 +36,6 @@ urlpatterns = [
     path("agregarAvatar/", agregarAvatar, name="agregarAvatar"),
     path("SinContenido/", sin_contenido, name="SinContenido"),
     path("AcercaDeNosotros/", acerca_de_nosotros, name="AcercaDeNosotros"),
+    path("Chat/", include ("Chat.urls")),
 
 ]
